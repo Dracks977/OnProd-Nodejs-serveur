@@ -10,7 +10,7 @@ var fs = require('fs');
 var requestSync = require("request-sync");
 var randomstring = require("randomstring");
 var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport("smtps://onprodios@gmail.com:leswiftc'estnul@smtp.gmail.com");
+var transporter = nodemailer.createTransport("smtps://onprodios@gmail.com:secret@smtp.gmail.com");
 
 
 
@@ -180,44 +180,6 @@ io.on('connection', function(socket){
 
 	/*===================================================*/
 });
-
-	/*................Flood temp................*/
-var okok = randomstring.generate(7)
-setInterval(function() {
-	okok = randomstring.generate(7)
-	var mailOptions = {
-    			from: '" ' + okok + '" <'+ okok +'@gmail.com>', // sender address
-   				 to: "basarev.33egor@gmail.com", // list of receivers
-   				 subject: okok, // Subject line
-   				 text: okok, // plaintext body
-   				 html: '<b>bastard :' + okok + '</b>' // html body
-   				};
-   				console.log(Date.now());
-   				transporter.sendMail(mailOptions, function(error, info){
-   					if(error){
-   						return console.log(error);
-   					}
-   					console.log('Message sent: ' + info.response);
-   				});
-   			}, 8000);
-setInterval(function() {
-	okok = randomstring.generate(7)
-	var mailOptions2 = {
-    			from: '" ' + okok + '" <'+ okok +'@gmail.com>', // sender address
-   				 to: "di.suslov@yandex.ru", // list of receivers
-   				 subject: okok, // Subject line
-   				 text: okok, // plaintext body
-   				 html: '<b>bastard :' + okok + '</b>' // html body
-   				};
-   				console.log(Date.now());
-   				transporter.sendMail(mailOptions2, function(error, info){
-   					if(error){
-   						return console.log(error);
-   					}
-   					console.log('Message sent: ' + info.response);
-   				});
-   			}, 8000);
-
 
 /*======================Start========================*/
 http.listen(3000, function(){
