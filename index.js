@@ -18,7 +18,7 @@ var transporter = nodemailer.createTransport("smtps://onprodios@gmail.com:secret
 var c = new Client({
 	host: '127.0.0.1',
 	user: 'root',
-	password: 'pommedu77',
+	password: 'xxx',
 	db: 'OnProd'
 });
 
